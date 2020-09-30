@@ -64,7 +64,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Trash #1</h1>
+        <h1>Trash #2</h1>
         <div className="trash">
           {!this.state.isLaoding ? (
             <Status height={this.state.height} sm={this.state.sm} />
