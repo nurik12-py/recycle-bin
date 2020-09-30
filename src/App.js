@@ -64,14 +64,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h2>
-          Статус:{" "}
-          {this.state.height && this.state.height > 25
-            ? "Full"
-            : this.state.height > 13
-            ? "Medium"
-            : "Low"}
-        </h2>
+        <h1>Trash #1</h1>
         <div className="trash">
           {!this.state.isLaoding ? (
             <Status height={this.state.height} sm={this.state.sm} />

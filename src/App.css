@@ -8,6 +8,7 @@ h3 {
   text-align: center;
 }
 .trash {
+  margin-top: 3vh;
   display: flex;
   flex-direction: column-reverse;
   background: #e2e2e2;
