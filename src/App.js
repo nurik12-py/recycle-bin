@@ -66,9 +66,9 @@ class App extends React.Component {
       <div className="App">
         <h2>
           Статус:{" "}
-          {this.state.height && this.state.height > 70
+          {this.state.height && this.state.height > 25
             ? "Full"
-            : this.state.height > 40
+            : this.state.height > 13
             ? "Medium"
             : "Low"}
         </h2>
