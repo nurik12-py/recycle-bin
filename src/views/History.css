@@ -1,0 +1,8 @@
+.hide-in-sm {
+    display: none !important;;
+}
+@media (min-width: 992px) { 
+    .hide-in-sm {
+        display: block !important;; 
+    }
+}

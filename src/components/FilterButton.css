@@ -1,0 +1,24 @@
+.filter-options {
+    width: 100px;
+    padding: 6px;
+    background-color: white;
+    top: 0;
+    right: -116px;
+    z-index: 11;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+} 
+.filter-option {
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+@media (max-width: 1200px) { 
+    .filter-options {
+        right: 28px;
+        top: -6px;
+    }
+}
+.filter-option:hover {
+    color: white;
+    background-color: #3d62be;
+}

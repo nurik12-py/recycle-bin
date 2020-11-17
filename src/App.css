@@ -1,0 +1,9 @@
+.res-height {
+    height: 50%;
+}
+
+@media (min-width: 992px) { 
+    .res-height {
+        height: 100%;
+    }
+}

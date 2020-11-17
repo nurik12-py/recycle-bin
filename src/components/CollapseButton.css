@@ -1,0 +1,16 @@
+.collapse-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    top: 20px;
+    right: -36px;
+    background: #E1E1E1;
+    border-radius: 0px 12px 12px 0px;
+    border: none;
+    z-index: 10;
+}
+.collapse-btn:focus {
+    outline: none;
+}

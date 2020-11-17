@@ -1,0 +1,11 @@
+.trash-counter {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+    background-image: url("../../assets/trash.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
