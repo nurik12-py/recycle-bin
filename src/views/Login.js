@@ -39,7 +39,7 @@ class Login extends Component {
                     id="inputPassword"
                     name="password"
                     className="form-control"
-                    placeholder="Пороль"
+                    placeholder="Пароль"
                     onChange={this.handleInputChange}
                     required={true} />
                 <button

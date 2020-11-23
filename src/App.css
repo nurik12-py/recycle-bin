@@ -7,3 +7,25 @@
         height: 100%;
     }
 }
+.vertical-scroll {
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #7BA3C5; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #425769; 
+  }

@@ -10,23 +10,56 @@ import { getLocations } from '../services/mainService';
 import CollapseButton from '../components/CollapseButton';
 import FilterButton from '../components/FilterButton';
 
+function compareObjects(a, b) {
+    let s = (o) => Object.entries(o).sort().map(i => {
+        if (i[1] instanceof Object) i[1] = s(i[1]);
+        return i
+    })
+    return JSON.stringify(s(a)) === JSON.stringify(s(b))
+}
 
 class Redesign extends Component {
-    state = {
-        zoom: 12,
-        locations: [],
-        filtered: [],
-        queried: [],
-        isSidebarHidden: true,
-        isTableHidden: false
+    constructor(props) {
+        super();
+        this.state = {
+            zoom: 12,
+            locations: [],
+            filtered: [],
+            queried: [],
+            isSidebarHidden: true,
+            isTableHidden: false
+        }
     }
-    async componentDidMount() {
-        const { data } = await getLocations();
-        this.setState({ locations: data, filtered: data, queried: data });
+
+
+    componentDidMount() {
+        this.interval = setInterval(this.getData, 3000);
+        getLocations().then(res => {
+            this.setState({ locations: res.data, filtered: res.data, queried: res.data });
+        })
+        this.getData();
+
     }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
+    getData = () => {
+        getLocations().then(res => {
+            if (!compareObjects(res.data, this.state.locations)) {
+                console.log("hello");
+                this.props.history.go("/");
+                this.setState({ locations: res.data, filtered: res.data, queried: res.data });
+            } else {
+                console.log("hello 1");
+            }
+        })
+    }
+
     handleCordinate = (coordinates) => {
         console.log(coordinates, this.state.zoom);
-        this.setState({ mapCenterCordinates: coordinates, zoom: 15, isTableHidden: !this.state.isTableHidden });
+        this.setState({ mapCenterCordinates: coordinates, zoom: 14, isTableHidden: !this.state.isTableHidden });
     }
     handleMenuClick = () => {
         this.setState({ isSidebarHidden: !this.state.isSidebarHidden });

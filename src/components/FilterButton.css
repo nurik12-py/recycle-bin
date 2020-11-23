@@ -4,7 +4,7 @@
     background-color: white;
     top: 0;
     right: -116px;
-    z-index: 11;
+    z-index: 100;
     border-radius: 6px;
     border: 1px solid #dee2e6;
 } 
@@ -12,13 +12,14 @@
     padding: 3px 6px;
     border-radius: 3px;
 }
-@media (max-width: 1200px) { 
-    .filter-options {
-        right: 28px;
-        top: -6px;
-    }
-}
+
 .filter-option:hover {
     color: white;
     background-color: #3d62be;
+}
+@media (max-width: 576px) { 
+    .filter-options {
+        top: 0;
+        right: 26px;
+    }
 }

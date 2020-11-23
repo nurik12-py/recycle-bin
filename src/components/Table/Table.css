@@ -1,3 +1,9 @@
 .bi-geo-alt-fill {
     color: #5680A6;
 }
+.on-map-text {
+    color: #7BA3C5;
+}
+.on-map-text:hover {
+    opacity: 0.5;
+}

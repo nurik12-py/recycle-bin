@@ -12,9 +12,19 @@ class Navbar extends Component {
             status: [0, 0, 0]
         }
     }
-    async componentDidMount() {
-        const { data } = await getStatus()
-        this.setState({ status: data.status });
+    componentDidMount() {
+        this.interval = setInterval(this.getData, 3000);
+        this.getData();
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
+    getData = () => {
+        getStatus().then(res => {
+            this.setState({ status: res.data.status });
+        })
     }
     render() {
         return (

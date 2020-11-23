@@ -8,13 +8,13 @@ import { Link } from 'react-router-dom';
 const Sidebar = ({ isHidden }) => {
     return (
         <div className={isHidden ? "d-none" : "d-flex sidebar flex-column align-items-center"} style={{ width: "60px", minWidth: "60px", background: "#2A52BB", color: "white" }}>
-            <Link to="/">
+            <Link to="/" title="Главная">
                 <HomeFillIcon />
             </Link>
-            <Link to="/history">
+            <Link to="/history" title="История">
                 <HistoryIcon />
             </Link>
-            <Link to="/settings">
+            <Link to="/settings" title="Настройки">
                 <GearIcon />
             </Link>
         </div>
